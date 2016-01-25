@@ -1,0 +1,18 @@
+
+*{
+	border-sizing: border-box;
+}
+
+
+.mapClass {
+	position: relative;
+/*	top: 0;
+	left: 0;*/
+	margin: 0;
+}
+
+.iconClass {
+	position: absolute;
+	margin: 0;
+}
+

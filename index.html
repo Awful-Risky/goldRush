@@ -3,11 +3,21 @@
 <head>
 	<title>Gold Rush</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body ng-controller="goldMapper">
-	<button ng-click="showEvent($event)">Click me to show event!</button>
+
+	<div>
+		<img class="mapClass" src="goldMap.png" ng-click="clickEvent($event)">
+		<img ng-click="removeIcon()" style="left : {{x}}px; top : {{y}}px" ng-show="showIcon" class="iconClass" src="mapIcon.png">
+	</div>
+	
+	<div>
+		
+	</div>
+
 </body>
 </html>
