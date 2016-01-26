@@ -1,23 +1,23 @@
 angular.module('goldRush', [])
 
-angular.module('goldRush').
-	.factory('treasurePoints', [function() {
-		var coords= [
-			{
-				coordx: center,
-				coordy: center,
-				note: click to start
-			}
+// // angular.module('goldRush').
+// // 	.factory('treasurePoints', [function() {
+// // 		var coords= [
+// // 			{
+// // 				coordx: center,
+// // 				coordy: center,
+// // 				note: click to start
+// // 			}
 		
-			}]
+// // 			}]
 
-		// var notes= ["note0","note1","note2"]
-		// i=((coords.length)-1))
+// 		// var notes= ["note0","note1","note2"]
+// 		// i=((coords.length)-1))
 		
-		// return {
-		// 	coords[i]:note[i]}
-	}]);
+// 		// return {
+// 		// 	coords[i]:note[i]}
 
+// 	}]);
 
 
 
@@ -32,11 +32,11 @@ angular.module('goldRush')
 		$scope.clickEvent = function(event) {
 			$scope.x = ((event.clientX) - 16);
 			$scope.y = ((event.clientY) - 37);
-			push{
-				x: event.clientX
-				y: $scope.y
-				notes: 
-			}
+			// push{
+			// 	x: event.clientX
+			// 	y: $scope.y
+			// 	notes: 
+			// }
 			$scope.showIcon = !$scope.showIcon;
 			console.log(event.pageX);
 			console.log(event.pageY);
