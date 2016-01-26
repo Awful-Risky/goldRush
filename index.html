@@ -3,13 +3,11 @@
 <head>
 	<title>Gold Rush</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
-	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body ng-controller="goldMapper">
-
 	<div>
 		<img class="mapClass" src="goldMap.png" ng-click="clickEvent($event)" >
 		<div ng-repeat="obj in xyNotes" ng-hide="obj.showIcon" > 
@@ -20,11 +18,8 @@
 			</div>
 			<div ng-show="obj.showToolTip">
 				<p ng-show="hide" style="left : {{obj.x}}px; top : {{obj.y}}px" class="tooltipClass"> There be gold at map coordinate: <br> (X:{{obj.x}}, Y:{{obj.y}}) <br> Note: {{obj.notes}}</p>
-			</div>
-			
-			
+			</div>	
 		</div>
 	</div>
-
 </body>
 </html>
