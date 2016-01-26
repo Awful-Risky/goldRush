@@ -12,7 +12,18 @@
 
 	<div>
 		<img class="mapClass" src="goldMap.png" ng-click="clickEvent($event)" >
-		<img ng-repeat="obj in xyNotes" ng-click="removeIcon(obj)" style="left : {{obj.x}}px; top : {{obj.y}}px" ng-hide="obj.showIcon" class="iconClass" src="mapIcon.png">
+		<div ng-repeat="obj in xyNotes" ng-hide="obj.showIcon" > 
+			<img ng-mouseenter="hide = true" ng-mouseleave="hide = false" ng-click="removeIcon(obj)" style="left : {{obj.x}}px; top : {{obj.y}}px" class="iconClass" src="mapIcon.png">
+			<div ng-hide="obj.showTextBox">
+				<input ng-model="obj.notes" type="text" style="left : {{obj.x}}px; top : {{obj.y}}px" class="iconTextBox">
+				<input ng-click="removeInputBox(obj)" type="submit" value="Save" style="left : {{obj.x}}px; top : {{obj.y}}px" class="submitTextBox">
+			</div>
+			<div ng-show="obj.showToolTip">
+				<p ng-show="hide" style="left : {{obj.x}}px; top : {{obj.y}}px" class="tooltipClass"> There's gold at coordinate X:{{obj.x}} & Y:{{obj.y}}.  Note the following: {{obj.notes}}</p>
+			</div>
+			
+			
+		</div>
 	</div>
 
 </body>
