@@ -1,21 +1,11 @@
 angular.module('goldRush', [])
 
-// // angular.module('goldRush').
-// // 	.factory('treasurePoints', [function() {
-// // 		var coords= [
-// // 			{
-// // 				coordx: center,
-// // 				coordy: center,
-// // 				note: click to start
-// // 			}
-		
-// // 			}]
+// angular.module('goldRush').
+// 	.factory('treasurePoints', [function() {
+// 		var xyNotes= []
 
-// 		// var notes= ["note0","note1","note2"]
-// 		// i=((coords.length)-1))
 		
-// 		// return {
-// 		// 	coords[i]:note[i]}
+// 		return {}
 
 // 	}]);
 
@@ -23,37 +13,41 @@ angular.module('goldRush', [])
 
 angular.module('goldRush')
 	.controller('goldMapper', ['$scope', function($scope) {
-		// $scope.showEvent = function(event) {
-		// 	console.log(event);
-
-		// }
-	
-		$scope.showIcon = false;
+		
+		$scope.xyNotes= []
+		// $scope.showIcon = false;
 		$scope.clickEvent = function(event) {
-			$scope.x = ((event.clientX) - 16);
-			$scope.y = ((event.clientY) - 37);
-			// push{
-			// 	x: event.clientX
-			// 	y: $scope.y
-			// 	notes: 
-			// }
-			$scope.showIcon = !$scope.showIcon;
-			console.log(event.pageX);
-			console.log(event.pageY);
+			// $scope.x = ((event.clientX) - 16);
+			// $scope.y = ((event.clientY) - 37);
+			
+			// console.log(event.pageX);
+			// console.log(event.pageY);
+			
+			// $scope.showIcon = true;
+			$scope.xyNotes.push({
+				x : ((event.clientX) -16),
+				y : ((event.clientY) - 37),
+			})
+			console.log($scope.xyNotes);
 		}
-		$scope.removeIcon = function () {
-			$scope.showIcon = !$scope.showIcon;
+		$scope.removeIcon = function (obj) {
+			obj.showIcon = !obj.showIcon;
 		}
 }])
 
 
 
-
-
-
 //Testing....
-    // $scope.coords = {}
-    // $scope.y = event.clientY;
-    // &scope.x = event.clientX;
-    
-    // coords.push("X coords: " + x + ", Y coords: " + y;
+
+
+
+
+
+
+
+
+
+
+
+
+
