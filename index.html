@@ -19,7 +19,7 @@
 				<input ng-click="removeInputBox(obj)" type="submit" value="Save" style="left : {{obj.x}}px; top : {{obj.y}}px" class="submitTextBox">
 			</div>
 			<div ng-show="obj.showToolTip">
-				<p ng-show="hide" style="left : {{obj.x}}px; top : {{obj.y}}px" class="tooltipClass"> There's gold at coordinate X:{{obj.x}} & Y:{{obj.y}}.  Note the following: {{obj.notes}}</p>
+				<p ng-show="hide" style="left : {{obj.x}}px; top : {{obj.y}}px" class="tooltipClass"> There be gold at map coordinate: <br> (X:{{obj.x}}, Y:{{obj.y}}) <br> Note: {{obj.notes}}</p>
 			</div>
 			
 			

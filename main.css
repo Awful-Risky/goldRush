@@ -29,6 +29,13 @@
 .tooltipClass {
 	position: absolute;
 	margin-left: 40px;
-	width: 200px;
-	background-color: white;
+	width: 250px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(220,223,230,1);
+	border-radius: 10px;
+	padding:10px;
+	border-style: solid;
+	border-color: black;
+	border-weight: 1px;
 }
